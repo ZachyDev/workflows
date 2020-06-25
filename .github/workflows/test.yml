@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          dev: ${{secret.DEVLOPER_NAME}}  
       - name: trying to check the tests
-        run: echo Hello,World! from ${{ secret.DEVELOPER_NAME }}
+        run: echo Hello,World! from dev
 # job2
   security:
     runs-on: ubuntu-latest
