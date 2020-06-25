@@ -23,7 +23,9 @@ jobs:
         run: |
             echo Add your projects to test
             echo deploy and test the application
-    test2: 
+
+        # job2
+  test2: 
       name: Running unit test 2
       runs-on: windows-latest
       steps:
