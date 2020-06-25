@@ -1,41 +1,18 @@
-# this is the workflow name
-name: basic test workflow
+# name of the workflow
+name: Test workflow
 on:
   push:
     branches: [ master ]
-  pull_request:
+  pull_request: 
     branches: [ master ]
-
-# This workflow consists of a single job called test
 jobs:
   test:
-    name: Running Unit Test1
-    # the type of runner it will run on
-    runs-on: ubuntu-latest
-
-    # steps
+    
+    name: Running the test file
+    runs-on: windows-server
     steps:
-      - uses: actions/checkout@v2
-      - name: run one line script
+      - uses: checkout@v2
+      - name: trying to check the tests
         run: echo Hello,World!
-
-      - name: run a multi-line script
-        run: |
-            echo Add your projects to test
-            echo deploy and test the application
- 
-        # job2
-  test2: 
-      name: Running unit test 2
-      runs-on: windows-latest
-      steps:
-        - uses: stefanoeb/eslint-action@1.0.2
-        - with: 
-            files: .github/workflows/script.js
-        - name: Run ESLint
-          run: echo checking styles
-           
- 
-
-
-
+        
+    
