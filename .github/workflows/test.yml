@@ -16,7 +16,7 @@ jobs:
         with:
           dev: ${{secrets.DEVELOPER_NAME}}  
       - name: trying to check the tests
-        run: echo Hello,World! from dev
+        run: echo Hello,World! from ${{env.dev}}
 # job2
   security:
     runs-on: ubuntu-latest
