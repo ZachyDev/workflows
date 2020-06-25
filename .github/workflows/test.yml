@@ -20,8 +20,10 @@ jobs:
     name: Eslinter
     runs-on: ubuntu-latest
     steps:
+      - name: Installing modules
+        run: yarn
       - uses: actions/checkout@v2
       - uses:  stefanoeb/eslint-action@1.0.2
-      - name: Running the linter
+      - name: Running eslint
         run: eslint . .js,.ts,.jsx
     
