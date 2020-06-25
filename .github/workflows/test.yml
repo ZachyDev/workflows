@@ -16,15 +16,11 @@ jobs:
       - name: trying to check the tests
         run: echo Hello,World!
 # job2
-  jsdoc:
-    name: Generating project documentation
-    runs-on: windows-latest
+  security:
+    runs-on: ubuntu-latest
     steps:
-      - uses: brunokrauss/jsdoc-action@1
+      - name: Test for public javascript library vulnerabilities 
+        uses: lirantal/is-website-vulnerable@master
         with:
-          jsdoc-path: '.github/workflow/script.js'     
-      - name: I am generating a documentation for you
-        run: echo process done!
-
-       
+          scan-url: "https:zachyapi.netlify.com"
     
