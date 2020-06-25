@@ -10,7 +10,7 @@ jobs:
   test:
     
     name: Running the test file
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: trying to check the tests
