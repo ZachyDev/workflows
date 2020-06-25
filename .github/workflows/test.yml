@@ -9,7 +9,7 @@ jobs:
   test:
     
     name: Running the test file
-    runs-on: windows-server
+    runs-on: windows-latest
     steps:
       - uses: action/checkout@v2
       - name: trying to check the tests
