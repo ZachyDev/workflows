@@ -12,11 +12,12 @@ jobs:
     name: Running tests
     runs-on: ubuntu-latest
     steps:
+      - name: Developer credentials
       - uses: actions/checkout@v2
         with:
           dev: ${{secrets.DEVELOPER_NAME}}  
       - name: trying to check the tests
-        run: echo Hello,World! from ${{env.dev}}
+        run: echo Hello,World!
 # job2
   security:
     runs-on: ubuntu-latest
