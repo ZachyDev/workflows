@@ -24,6 +24,9 @@ jobs:
         run: yarn
       - uses: actions/checkout@v2
       - uses:  stefanoeb/eslint-action@1.0.2
+        with:
+          files: src/
       - name: Running eslint
         run: eslint . .js,.ts,.jsx
+       
     
