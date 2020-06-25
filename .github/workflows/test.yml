@@ -23,13 +23,21 @@ jobs:
         run: |
             echo Add your projects to test
             echo deploy and test the application
-
+ 
         # job2
   test2: 
       name: Running unit test 2
       runs-on: windows-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: stefanoeb/eslint-action@1.0.2
+        - name: Run ESLint
+          run: echo checking styles
+        - with: 
+            files: .github/workflows/script.js
+           
+           
+        - uses: actions/checkout@v2z
+          
         - name: run one line script
           run: echo hello this is the second script
 
