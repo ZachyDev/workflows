@@ -22,5 +22,5 @@ jobs:
       - name: Test for public javascript library vulnerabilities 
         uses: lirantal/is-website-vulnerable@master
         with:
-          scan-url: "https:zachyapi.netlify.com"
+          scan-url: "https://www.jumia.co.ke/"
     
