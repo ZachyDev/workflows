@@ -12,11 +12,7 @@ jobs:
     name: Running tests
     runs-on: ubuntu-latest
     steps:
-      - name: Developer credentials
-        run: Validating
-      - uses: actions/checkout@v2
-        with:
-          dev: ${{secrets.DEVELOPER_NAME}}  
+      - uses: actions/checkout@v2 
       - name: trying to check the tests
         run: echo Hello,World!
 # job2
