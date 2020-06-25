@@ -35,16 +35,6 @@ jobs:
         - name: Run ESLint
           run: echo checking styles
            
-           
-        - uses: actions/checkout@v2z
-        - name: run one line script
-          run: echo hello this is the second script
-
-        - name: run multi-line script
-          run: |
-              echo running job 2
-              echo job completed
-              - name: Run ESLint
  
 
 
