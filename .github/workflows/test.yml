@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    types: [ opened,reopened]
+    branches: [ master ]
 jobs:
   #job1 
   test:
@@ -24,15 +24,5 @@ jobs:
         with:
           scan-url: "https://www.jumia.co.ke/"
 
-#  auto merge job
-  merge:
-    name: Reviewing and merging PR
-    runs-on: ubuntu-latest
-    steps:
-    - uses: hmarr/auto-approve-action@v2.0.0
-      if: github.actor == 'zachydev' || github.actor == 'dependabot-preview[bot]'
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
-    - name: Merging PR
-      run: Merged PR 
+
 
