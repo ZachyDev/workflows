@@ -30,14 +30,13 @@ jobs:
       runs-on: windows-latest
       steps:
         - uses: stefanoeb/eslint-action@1.0.2
-        - name: Run ESLint
-          run: echo checking styles
         - with: 
             files: .github/workflows/script.js
+        - name: Run ESLint
+          run: echo checking styles
            
            
         - uses: actions/checkout@v2z
-          
         - name: run one line script
           run: echo hello this is the second script
 
@@ -45,6 +44,8 @@ jobs:
           run: |
               echo running job 2
               echo job completed
+              - name: Run ESLint
+ 
 
 
 
