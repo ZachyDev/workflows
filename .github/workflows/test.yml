@@ -9,7 +9,7 @@ jobs:
   #job1 
   test:
     
-    name: Running the test file
+    name: Running tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
