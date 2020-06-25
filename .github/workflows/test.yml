@@ -3,8 +3,8 @@ name: Test workflow
 on:
   push:
     branches: [ master ]
-  pull_request: 
-    branches: [ master ]
+  pull_request:
+    types: [ opened,reopened]
 jobs:
   #job1 
   test:
