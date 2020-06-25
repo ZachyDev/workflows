@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          dev: ${{secret.DEVLOPER_NAME}}  
+          dev: ${{secret.DEVELOPER_NAME}}  
       - name: trying to check the tests
         run: echo Hello,World! from dev
 # job2
