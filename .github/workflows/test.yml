@@ -23,6 +23,18 @@ jobs:
         run: |
             echo Add your projects to test
             echo deploy and test the application
+    test2: 
+      name: Running unit test 2
+      runs-on: windows-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: run one line script
+          run: echo hello this is the second script
+
+        - name: run multi-line script
+           run: |
+              echo running job 2
+              echo job completed
 
 
 
