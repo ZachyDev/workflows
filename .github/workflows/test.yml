@@ -6,6 +6,7 @@ on:
   pull_request: 
     branches: [ master ]
 jobs:
+  #job1 
   test:
     
     name: Running the test file
@@ -15,21 +16,15 @@ jobs:
       - name: trying to check the tests
         run: echo Hello,World!
 # job2
-  eslint:
-    
-   name: eslint
-   runs-on: ubuntu-latest
-   steps:
-    - uses: actions/checkout@v1
-    - name: install node v12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - name: yarn install
-      run: yarn install
-    - name: eslint
-      uses: icrawl/action-eslint@v1
-      with:
-        custom-glob: apps # only if a different glob is needed, default: src
+  jsdoc:
+    name: Generating project documentation
+    runs-on: windows-latest
+    steps:
+      - uses: brunokrauss/jsdoc-action@1
+        with:
+          jsdoc-path: '.github/workflow/script.js'     
+      - name: I am generating a documentation for you
+        run: echo process done!
+
        
     
