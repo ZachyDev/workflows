@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Developer credentials
+        run: Validating
       - uses: actions/checkout@v2
         with:
           dev: ${{secrets.DEVELOPER_NAME}}  
